@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#101014" />
+  <meta name="description" content="NETNEO — discover movies, African stories, animation and music." />
+  <title>NETNEO — Watch what moves you</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="NETNEO home"><span class="brand-mark">N</span>NETNEO</a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a class="active" href="#home">Home</a>
+      <a href="#browse">Explore</a>
+      <a href="#african">African stories</a>
+      <a href="#music">Music</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button" id="searchToggle" aria-label="Search">⌕</button>
+      <button class="text-button" id="downloadsButton">Downloads <span id="downloadCount">0</span></button>
+      <button class="profile-button" id="authButton">Sign in</button>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span class="live-dot"></span> STORIES WITHOUT BORDERS</p>
+        <p class="hero-kicker">NETNEO ORIGINAL · FEATURED</p>
+        <h1 id="heroTitle">The stories<br />that move us.</h1>
+        <p class="hero-copy">Big-screen adventures, bold African cinema, animation and music—all in one place.</p>
+        <div class="hero-actions">
+          <button class="primary-button" data-play="The Long Road">▶ <span>Explore featured</span></button>
+          <a class="secondary-button" href="#browse">＋ <span>Browse collection</span></a>
+        </div>
+        <p class="hero-note">A showcase preview. Titles shown are sample listings.</p>
+      </div>
+      <div class="hero-badge"><span>NET</span><strong>NEO</strong><small>YOUR NEXT STORY</small></div>
+    </section>
+
+    <section class="notice" aria-label="Service information"><span>ⓘ</span> NETNEO is a front-end demo. Streaming, real accounts, payments, ads and licensed downloads need a production backend and rights-cleared content.</section>
+
+    <section class="section" id="browse">
+      <div class="section-heading">
+        <div><p class="eyebrow">FIND YOUR NEXT FAVORITE</p><h2>Explore the collection</h2></div>
+        <label class="search-box" id="searchBox"><span>⌕</span><input id="searchInput" type="search" placeholder="Search titles, genres, music…" aria-label="Search the collection" /></label>
+      </div>
+      <div class="filters" role="group" aria-label="Filter collection">
+        <button class="filter-chip selected" data-filter="All">All</button>
+        <button class="filter-chip" data-filter="Movies">Movies</button>
+        <button class="filter-chip" data-filter="African">African stories</button>
+        <button class="filter-chip" data-filter="Animation">Animation</button>
+        <button class="filter-chip" data-filter="Music">Music</button>
+      </div>
+      <div class="catalog-grid" id="catalogGrid" aria-live="polite"></div>
+      <p class="empty-state" id="emptyState" hidden>No matches yet. Try another title or category.</p>
+    </section>
+
+    <section class="african-section" id="african">
+      <div><p class="eyebrow">MADE OF MANY VOICES</p><h2>African stories, front and center.</h2><p>Discover sample listings inspired by the continent’s rich range of languages, filmmakers and cultures. Only publish films you own or are licensed to distribute.</p><a class="outline-button" href="#browse" data-select-filter="African">Explore African stories <span>→</span></a></div>
+      <div class="africa-art" aria-hidden="true"><span class="sun"></span><span class="art-line line-one"></span><span class="art-line line-two"></span><span class="art-caption">A WORLD OF<br />STORIES</span></div>
+    </section>
+
+    <section class="section music-section" id="music">
+      <div class="section-heading"><div><p class="eyebrow">PRESS PLAY</p><h2>More than movies</h2></div><span class="section-aside">Music &amp; entertainment</span></div>
+      <div class="music-callout"><span class="music-icon">♫</span><div><h3>One home for every kind of story.</h3><p>Explore music, performances, animation and entertainment in the collection above.</p></div><a href="#browse" data-select-filter="Music" class="outline-button">Find music <span>→</span></a></div>
+    </section>
+
+    <section class="business-section" id="advertise">
+      <div><p class="eyebrow">FOR CREATORS &amp; RIGHTS HOLDERS</p><h2>Put your work in the spotlight.</h2><p>Promote a film, album or event. Send an inquiry to discuss rights, placements, audience reach and campaign pricing.</p><button class="primary-button" id="adOpen">Advertise on NETNEO <span>→</span></button></div>
+      <div class="business-card"><span class="business-icon">✳</span><strong>Creator-first promotion</strong><p>Campaigns should be transparent, approved and targeted with consent.</p><span class="business-tag">PARTNER WITH US</span></div>
+    </section>
+
+    <section class="subscribe-section">
+      <div><p class="eyebrow">YOUR NEXT FAVORITE IS WAITING</p><h2>Make room for more.</h2><p>Choose a plan when NETNEO launches in your region.</p></div>
+      <button class="primary-button" id="subscribeButton">View membership <span>→</span></button>
+    </section>
+  </main>
+
+  <footer class="footer"><a class="brand" href="#home"><span class="brand-mark">N</span>NETNEO</a><p>© <span id="year"></span> NETNEO · A streaming concept demo</p><div><a href="#advertise">For creators</a><a href="#browse">Browse</a><a href="#home">Back to top ↑</a></div></footer>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close dialog">×</button>
+      <div id="modalContent"></div>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
