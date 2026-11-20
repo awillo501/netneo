@@ -1,0 +1,20 @@
+{
+  "name": "netneo",
+  "version": "1.0.0",
+  "description": "NETNEO — discover movies, African stories, animation and music",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Static site - no build needed'",
+    "lint": "echo 'No linter configured'"
+  },
+  "keywords": [
+    "streaming",
+    "movies",
+    "entertainment"
+  ],
+  "author": "awillo501",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/speed-insights": "^1.0.12"
+  }
+}
